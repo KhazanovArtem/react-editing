@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux"
-import { addIdActive, addService, changeForm, removeService } from "../redux/dispatchFunc"
+import { addIdActive, addService, changeForm, removeService} from "../redux/dispatchFunc"
 
 
 export default function ServiceAddList() {

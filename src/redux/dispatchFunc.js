@@ -3,6 +3,7 @@ import {
     REMOVE_SERVICE,
     CHANGE_SERVICE_FIELD,
     ID_ACTIVE,
+    FILTER_SERVICE
 } from "./action";
 
 const changeForm = (name, value = null) => {
@@ -33,4 +34,11 @@ const addIdActive = (id) => {
     }
 }
 
-export { changeForm, addService, removeService, addIdActive };
+const changeSearchField = (name, value) => {
+    return {
+        type: FILTER_SERVICE,
+        payload: { name, value }
+    };
+}
+
+export { changeForm, addService, removeService, addIdActive, changeSearchField };

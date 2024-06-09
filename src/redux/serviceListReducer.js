@@ -7,7 +7,7 @@ const serviceListReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_SERVICE:
             const { name, price } = action.payload;
-            return [...state, {id: nanoid(), name: name, price: Number(price)}];
+            return [...state, { id: nanoid(), name: name, price: Number(price) }];
         case REMOVE_SERVICE:
             const { id } = action.payload;
             return state.filter((item) => item.id !== id);

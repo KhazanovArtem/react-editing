@@ -1,7 +1,8 @@
 import { combineReducers, compose, legacy_createStore } from "redux";
 
-import changeServiceReducer from "../redux/changeServiceReducer";
-import serviceListReducer from "../redux/serviceListReducer";
+import changeServiceReducer from "./changeServiceReducer";
+import serviceListReducer from "./serviceListReducer";
+import listReducer from "./changeSearchField";
 
 const ReactReduxDevTools =
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
@@ -11,6 +12,7 @@ function configureService() {
     combineReducers({
       changeService: changeServiceReducer,
       listService: serviceListReducer,
+      search: listReducer,
     }),
     undefined,
     compose(ReactReduxDevTools)
