@@ -1,6 +1,6 @@
 import { CHANGE_SERVICE_FIELD, ID_ACTIVE } from "./action";
 
-const initialState = { name: " ", price: "", idActive: null };
+const initialState = { name: "", price: "", idActive: null };
 
 const changeServiceReducer = (state = initialState, action) => {
   switch (action.type) {
